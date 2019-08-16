@@ -1,0 +1,17 @@
+export const CREATE_POST = 'CREATE_POST';
+export const CREATE_COMMENT = 'CREATE_COMMENT';
+export const CREATE_COMMENT_ERROR = 'CREATE_COMMENT';
+export const EDIT_POST = 'EDIT_POST';
+export const EDIT_ERROR = 'EDIT_ERROR';
+export const DELETE_POST = 'DELETE_POST';
+export const FETCH_POST = 'FETCH_POST';
+export const FETCH_POSTS = 'FETCH_POSTS';
+export const SIGN_IN_SUCCESS = 'SIGN_IN_SUCCESS';
+export const SIGN_IN_ERROR = 'SIGN_IN_ERROR';
+export const SIGN_OUT_SUCCESS = 'SIGN_OUT_SUCCESS';
+export const SIGN_OUT_ERROR = 'SIGN_OUT_ERROR';
+export const SIGN_UP_SUCCESS = 'SIGN_UP_SUCCESS';
+export const SIGN_UP_ERROR = 'SIGN_UP_ERROR';
+export const CREATE_POST_ERROR = 'CREATE_POST_ERROR';
+export const DELETE_POST_SUCCESS = 'DELETE_POST_SUCCESS';
+export const DELETE_POST_ERROR = 'DELETE_POST_ERROR';
