@@ -1,0 +1,59 @@
+{
+  "name": "ask-me-something",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "firebase": "^6.3.3",
+    "firebase-functions": "^3.2.0",
+    "firebase-tools": "^7.2.2",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-redux-firebase": "^3.0.0-alpha.13",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "reactstrap": "^8.0.1",
+    "redux": "^4.0.4",
+    "redux-firestore": "^0.8.0",
+    "redux-form": "^8.2.4",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.3.2",
+    "tools": "0.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-airbnb": "^2.6.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3",
+    "redux-logger": "^3.0.6"
+  }
+}
