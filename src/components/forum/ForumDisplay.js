@@ -39,7 +39,7 @@ class ForumDisplay extends React.Component {
       this.setState(initialState);
       this.formRef.reset();
     } else {
-      alert('comment cannot be empty');
+      alert('Comment cannot be empty');
     }
   };
 
@@ -79,7 +79,6 @@ class ForumDisplay extends React.Component {
   }
 }
 
-
 const mapStateToProps = (({ firestore: { data, ordered }, forums }, props) => ({
   forum: data.Forums && data.Forums[props.match.params.id],
   comments: ordered.comments || forums.forums
@@ -88,7 +87,11 @@ const mapStateToProps = (({ firestore: { data, ordered }, forums }, props) => ({
 export default compose(
   firestoreConnect(props => [{ collection: 'Forums', doc: props.match.params.id },
     {
-      collection: 'Forums', doc: props.match.params.id, subcollections: [{ collection: 'comments' }], storeAs: 'comments', orderBy: ['createdAt', 'asc']
+      collection: 'Forums',
+      doc: props.match.params.id,
+      subcollections: [{ collection: 'comments' }],
+      storeAs: 'comments',
+      orderBy: ['createdAt', 'asc']
     }]),
   connect(mapStateToProps, { createComment })
 )(ForumDisplay);

@@ -17,9 +17,8 @@ class Dashboard extends React.Component {
     this.setState({ modelIsOpen: !this.state.modalIsOpen });
   }
 
-
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const {
       forums, notifications, auth, comments
     } = this.props;
@@ -41,12 +40,12 @@ class Dashboard extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  forums: state.firestore.ordered.Forums || state.forums.forums, // google why map function doesnt work
-  profile: state.firebase.profile,
-  comments: state.firestore.ordered.comments || state.forums.forums,
-  notifications: state.firestore.ordered.notifications,
-  auth: state.firebase.auth
+const mapStateToProps = ({ firestore: { ordered }, firebase, forums }) => ({
+  forums: ordered.Forums || forums.forums, // google why map function doesnt work
+  profile: firebase.profile,
+  comments: ordered.comments || forums.forums,
+  notifications: ordered.notifications,
+  auth: firebase.auth
 });
 
 export default compose(

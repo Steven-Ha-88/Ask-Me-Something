@@ -3,15 +3,12 @@
 body {
   background-color: #CAD5DD; 
 }
-h6 {
+h6 h5:first-child {
   margin-top: 20px;
   border-width: 0 0 1px;
   border-style: solid;
   color: black;
 
-}
-h5:first-child {
-  margin-top: 20px;
 }
 
 .feed {
@@ -43,7 +40,7 @@ h5:first-child {
   font-size: 0.9rem;
 }
 
-
+/* Feed */
 .post {
   text-decoration: 'none';
   font-size: 1rem;
@@ -53,7 +50,6 @@ h5:first-child {
 text-decoration: none;
 color: black;
 } 
-
 
 .ui.card, .ui.cards>.card {
   width: auto;
@@ -71,13 +67,6 @@ color: black;
   margin: 14px 0;
 }
 
-.header {
-  font-weight: 700;
-  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-  font-size: 1.2rem;
-}
-
-
 .ui.card>.content .arrow.icon:hover, .ui.cards>.card>.content .arrow.icon:hover {
   opacity: 1;
   color: rgb(173,154,255);
@@ -88,6 +77,13 @@ color: black;
   padding: 5px 10px;
 }
 
+.header {
+  font-weight: 700;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
 .btn.btn-sm {
   font-size: 0.9rem;
   margin-top: 2px;
@@ -96,9 +92,7 @@ color: black;
  .label {
   margin-top: 5px;
 } 
-.header {
-  text-decoration: none;
-}
+
 .admin-btn {
   margin: 0 2px;
   font-size: 0.8rem;
@@ -120,6 +114,8 @@ form {
   margin-top: 60px;
   padding: 10px;
   border-radius: 5px;
+  border: 1px solid;
+  border-color: black;
 }
 
 .form-display {

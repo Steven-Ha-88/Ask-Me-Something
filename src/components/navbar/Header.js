@@ -19,7 +19,7 @@ const Header = (props) => {
   return (
     <nav className="navbar navbar-expand-sm navbar-light" style={{ backgroundColor: '#FEFEFE' }}>
       <Logo src="https://image.flaticon.com/icons/svg/874/874951.svg" alt="Logo" />
-      <Link to="/" className="navbar-brand logo">Geddit</Link>
+      <Link to="/" className="navbar-brand logo">AskMeSomething</Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
         <span className="navbar-toggler-icon" />
       </button>
@@ -30,9 +30,9 @@ const Header = (props) => {
   );
 };
 
-const mapStateToProps = state =>
+const mapStateToProps = ({ firebase: { auth } }) =>
   // console.log(state);
   ({
-    auth: state.firebase.auth
+    auth
   });
 export default connect(mapStateToProps)(Header);

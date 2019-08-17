@@ -23,8 +23,6 @@ const forumComment = ({ comments }) => (
         </div>
       </div>
     </div>
-
   )));
-
 
 export default forumComment;

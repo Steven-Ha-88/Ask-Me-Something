@@ -27,7 +27,9 @@ class ForumDelete extends React.Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({ forum: state.firestore.data.Forums && state.firestore.data.Forums[ownProps.match.params.id] });
+const mapStateToProps = ({ firestore: { data } }, ownProps) => ({
+  forum: data.Forums && data.Forums[ownProps.match.params.id]
+});
 
 export default compose(firestoreConnect(props => [{ collection: 'Forums', doc: props.match.params.id }]),
   connect(mapStateToProps, { deletePost }))(ForumDelete);
