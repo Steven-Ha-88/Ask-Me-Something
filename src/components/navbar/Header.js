@@ -12,16 +12,6 @@ export const Logo = styled.img`
   margin-right: 5px;
 `;
 
-// const PostIcon = styled.img`
-//   width: 15px;
-//   height: 15px;
-//   margin-right: 10px
-// `;
-
-// const Brand = styled.a`
-//   text-align: left;
-// `;
-
 const Header = (props) => {
   const { auth } = props;
   const links = auth.uid ? <SignedInLinks /> : <SignedOutLinks />;
@@ -40,14 +30,9 @@ const Header = (props) => {
   );
 };
 
-
 const mapStateToProps = state =>
   // console.log(state);
   ({
     auth: state.firebase.auth
-  })
-;
-/* <PostIcon src="https://image.flaticon.com/icons/svg/1665/1665577.svg" alt="Create Post" /> */
-
-
+  });
 export default connect(mapStateToProps)(Header);

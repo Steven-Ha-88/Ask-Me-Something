@@ -10,15 +10,15 @@ import { deletePost } from '../../actions';
 class ForumDelete extends React.Component {
   renderActions() {
     const { id } = this.props.match.params;
+    const { deletePost } = this.props;
 
     return (
       <React.Fragment>
-        <button onClick={() => this.props.deletePost(id)} className="btn btn-danger">Delete</button>
+        <button onClick={() => deletePost(id)} className="btn btn-danger">Delete</button>
         <Link to="/" className="btn btn-secondary">Cancel</Link>
       </React.Fragment>
     );
   }
-
 
   render() {
     return (
@@ -29,4 +29,5 @@ class ForumDelete extends React.Component {
 
 const mapStateToProps = (state, ownProps) => ({ forum: state.firestore.data.Forums && state.firestore.data.Forums[ownProps.match.params.id] });
 
-export default compose(firestoreConnect(props => [{ collection: 'Forums', doc: props.match.params.id }]), connect(mapStateToProps, { deletePost }))(ForumDelete);
+export default compose(firestoreConnect(props => [{ collection: 'Forums', doc: props.match.params.id }]),
+  connect(mapStateToProps, { deletePost }))(ForumDelete);

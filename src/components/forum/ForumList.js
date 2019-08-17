@@ -22,7 +22,7 @@ class ForumList extends React.Component {
   }
 
   render() {
-    const { forums, comments } = this.props;
+    const { forums } = this.props;
 
     return (
       forums.map(forum => (
@@ -54,7 +54,6 @@ class ForumList extends React.Component {
     );
   }
 }
-
 
 const mapStateToProps = state => ({
   auth: state.firebase.auth

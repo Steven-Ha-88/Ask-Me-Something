@@ -10,7 +10,6 @@ import history from './history';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 
-
 const App = () => (
   <div>
     <Router history={history}>
@@ -29,6 +28,5 @@ const App = () => (
     </Router>
   </div>
 );
-
 
 export default App;

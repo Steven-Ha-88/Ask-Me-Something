@@ -14,32 +14,32 @@ const initialState = {
 class ForumDisplay extends React.Component {
  state = initialState;
 
-  formRef = () => null;
+ formRef = () => null;
 
-  validate = () => {
-    let commentError = '';
+ // validate = () => {
+ //   let commentError = '';
 
-    if (!this.state.comment) {
-      commentError = 'Comment cannot be blank';
-    }
+ //   if (!this.state.comment) {
+ //     commentError = 'Comment cannot be blank';
+ //   }
 
-    if (commentError) {
-      this.setState({ commentError });
-      return false;
-    }
-    return true;
-  }
+ //   if (commentError) {
+ //     this.setState({ commentError });
+ //     return false;
+ //   }
+ //   return true;
+ // }
 
   handleSubmit = (e) => {
     const { createComment } = this.props;
+    const { comment } = this.state;
     e.preventDefault();
-    // console.log(this.state);
-    const isValid = this.validate;
-    console.log(this.state);
-    if (isValid) {
+    if (comment) {
       createComment(this.props.match.params.id, this.state);
       this.setState(initialState);
       this.formRef.reset();
+    } else {
+      alert('comment cannot be empty');
     }
   };
 
@@ -50,6 +50,7 @@ class ForumDisplay extends React.Component {
   render() {
     // console.log(this.props);
     const { forum, comments } = this.props;
+
     return (
       <div className="ui container">
         <form className="form-display" onSubmit={this.handleSubmit} ref={ref => this.formRef = ref}>
@@ -67,9 +68,6 @@ class ForumDisplay extends React.Component {
           </div>
           <div>
             <textarea className="form-control comment-input" onChange={this.handleOnChange} id="comment" rows="3" placeholder="What are your thoughts?" />
-            <div style={{ fontSize: 12, color: 'red' }}>
-              {this.state.commentError}
-            </div>
           </div>
           <div>
             <button className="btn btn-primary">Post</button>

@@ -3,19 +3,24 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signUp } from '../../actions/index';
 
+const initialState = {
+  email: '',
+  password: '',
+  firstName: '',
+  lastName: ''
+};
 class SignUp extends Component {
-  state = {
-    email: '',
-    password: '',
-    firstName: '',
-    lastName: ''
-  }
+  state = initialState;
 
+  formRef = () => null;
+
+  errorRef = () => null;
 
   handleSubmit = (e) => {
     const { signUp } = this.props;
     e.preventDefault();
     signUp(this.state);
+    this.formRef.reset();
   }
 
   handleChange = (e) => {
@@ -29,7 +34,7 @@ class SignUp extends Component {
     if (auth.uid) return <Redirect to="/" />;
     return (
       <div className="container">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} ref={ref => this.formRef = ref}>
           <div className="form-group">
             <h4>Sign Up</h4>
             <label htmlFor="email">Email address</label>

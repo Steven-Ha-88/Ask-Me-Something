@@ -33,14 +33,13 @@ class ForumForm extends React.Component {
 
   render() {
     const { handleSubmit } = this.props;
-    const { renderInput, onSubmit } = this;
     // console.log(this.props);
     return (
       <div className="ui container">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(this.onSubmit)}>
           <h4>Create a Post</h4>
-          <Field name="title" component={renderInput} label="Title" />
-          <Field name="description" component={renderInput} label="Description" />
+          <Field name="title" component={this.renderInput} label="Title" />
+          <Field name="description" component={this.renderInput} label="Description" />
           <div>
             <button className="btn btn-primary">Post</button>
           </div>

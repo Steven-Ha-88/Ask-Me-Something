@@ -11,13 +11,14 @@ import '../../styles.css';
 
 class ForumEdit extends React.Component {
   onSubmit = (formValues) => {
+    const { id } = this.props.match.params;
     const { editPost } = this.props;
-    editPost(this.props.match.params.id, formValues);
+    editPost(id, formValues);
   }
 
   render() {
     const { auth, forum } = this.props;
-    console.log(this.props);
+    // console.log(this.props);
     if (!auth.uid) return <Redirect to="/signin" />;
     return (
       <div className="ui container">
