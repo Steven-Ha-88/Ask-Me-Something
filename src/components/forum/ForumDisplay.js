@@ -7,7 +7,7 @@ import Comment from './forumComments';
 import { createComment } from '../../actions/index';
 
 const initialState = {
-  comment: null,
+  comment: '',
   commentError: ''
 };
 
