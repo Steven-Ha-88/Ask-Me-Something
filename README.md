@@ -1,5 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Check out the demo:
+https://ask-me-something-e4828.firebaseapp.com
+
+## Technologies:
+- React
+- Redux
+- Firebase
+- Firestore
+- Styled Components
+- Bootstrap
+- Semantic UI
+
 ## Available Scripts
 
 In the project directory, you can run:
