@@ -3,6 +3,7 @@
 build/
 dist/
 fbconfig.js
+/config
 
 
 # Logs

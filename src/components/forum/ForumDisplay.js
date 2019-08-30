@@ -56,13 +56,11 @@ class ForumDisplay extends React.Component {
         <form className="form-display" onSubmit={this.handleSubmit} ref={ref => this.formRef = ref}>
           <div>
             <p className="author">
-              {`Posted by ${forum && forum.authorFirstName} ${forum && forum.authorLastName}`}
-            </p>
-            <p>
-              {moment(forum && forum.createdAt.toDate()).calendar()}
+              {`Posted by ${forum && forum.authorFirstName} ${forum && forum.authorLastName} `}
+              {moment(forum && forum.createdAt.toDate()).format('LT')}
             </p>
           </div>
-          <h3>{forum && forum.title}</h3>
+          <h3 className="post-display">{forum && forum.title}</h3>
           <div>
             <p>{forum && forum.description}</p>
           </div>

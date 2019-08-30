@@ -30,7 +30,7 @@ class ForumList extends React.Component {
           <div className="content">
             {this.renderAdmin(forum)}
             <Link to={`/forum/${forum.id}`} className="post" forum={forum}>
-              <div className="header">{forum.title}</div>
+              <div className="post-header header">{forum.title}</div>
             </Link>
             <div className="description">
               <p>{forum.description}</p>

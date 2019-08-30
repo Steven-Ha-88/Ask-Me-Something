@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import {
   CREATE_POST,
   CREATE_POST_ERROR,

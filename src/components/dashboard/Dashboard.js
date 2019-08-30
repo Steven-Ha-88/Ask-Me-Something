@@ -27,7 +27,7 @@ class Dashboard extends React.Component {
       <div className="dashboard container" key={forums.id}>
         <div className="row">
           <div className="col-sm-12 col-md-7">
-            <h4 className="dashboard-header">Forum</h4>
+            <h4 className="dashboard-header">Feed</h4>
             <ForumList forums={forums} key={forums.id} comments={comments} />
           </div>
           <div className="col-sm-12 col-md-4 offset-md-1">
